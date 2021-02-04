@@ -57,7 +57,7 @@
       console.log(notes);
       console.log(durations);
       function play(note, index) {
-        synth.triggerAttackRelease(note, duration[index]+"s", now + (index));
+        synth.triggerAttackRelease(note, durations[index]+"s", now + (index));
       }
       notes.forEach(play);
     }

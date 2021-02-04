@@ -49,9 +49,11 @@
       var synth = new Tone.Synth().toDestination();
       synth.triggerAttackRelease(note, duration);
     }
-    function playNotes(notes, durations) {
+    function playNotes(notes, durations,length) {
       const synth = new Tone.Synth().toDestination();
       const now = Tone.now()
+      notes=notes.slice(0,length);
+      durations=durations.slice(0,length);
       console.log(notes);
       console.log(durations);
       function play(note, index) {

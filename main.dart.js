@@ -10120,7 +10120,7 @@ ac4:function(a,b){var s,r
 a.toString
 s=H.ag(a).j("ar<1,o*>")
 r=P.aw(new H.ar(a,new R.TM(),s),!0,s.j("aU.E"))
-$.ZR().pf("playNote",[r,b])},
+$.ZR().pf("playNotes",[r,b])},
 TM:function TM(){},
 a2s:function(a,b,c){var s=K.aD(a)
 if(c>0)s.toString

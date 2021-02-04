@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -24,11 +25,12 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>hear_ma_name</title>
   <link rel="manifest" href="manifest.json">
 </head>
+
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -40,22 +42,23 @@
       });
     }
   </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js" type="application/javascript"></script>
-   <script src="main.dart.js" type="application/javascript"></script>
-   <script>
-       function playNote(note, duration) {
-         var synth = new Tone.Synth().toDestination();
-         synth.triggerAttackRelease(note, duration);
-       }
-function playNotes(notes, durations) {
-         const synth = new Tone.Synth().toDestination();
-const now = Tone.now()
-function play(note,index){
-    synth.triggerAttackRelease(note, "8n", now+(index==0?index:durations[index]))
-}
-notes.forEach(play)
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js" type="application/javascript"></script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  <script>
+    function playNote(note, duration) {
+      var synth = new Tone.Synth().toDestination();
+      synth.triggerAttackRelease(note, duration);
+    }
+    function playNotes(notes, durations) {
+      const synth = new Tone.Synth().toDestination();
+      const now = Tone.now()
+      function play(note, index) {
+        synth.triggerAttackRelease(note, "8n", now + (index == 0 ? index : durations[index]))
+      }
+      notes.forEach(play)
 
-       }
-     </script>
+    }
+  </script>
 </body>
+
 </html>

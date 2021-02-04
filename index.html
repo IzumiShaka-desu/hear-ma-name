@@ -52,8 +52,8 @@
     function playNotes(notes, durations,length) {
       const synth = new Tone.Synth().toDestination();
       const now = Tone.now()
-      notes=[...notes.slice(0,length)];
-      durations=[...durations.slice(0,length)];
+      notes=notes.split("|");
+      durations=durations.split("|");
       console.log(notes);
       console.log(durations);
       function play(note, index) {

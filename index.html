@@ -50,13 +50,14 @@
       synth.triggerAttackRelease(note, duration);
     }
     function playNotes(notes, durations, length) {
-      const synth = new Tone.Synth().toDestination();
+      // const synth = new Tone.Synth().toDestination();
+      const synth = new Tone.Sampler.fromSF2('assets/assets/Piano.sf2').toDestination();
       const now = Tone.now()
-      duration=[];
-      allNotes=[];
+      duration = [];
+      allNotes = [];
       notes = notes.split("|");
       durations = durations.split("|");
-      function addNotes(value,index){
+      function addNotes(value, index) {
         allNotes.push(value);
         duration.push(durations[index]);
       }

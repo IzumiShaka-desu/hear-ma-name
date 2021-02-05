@@ -112,21 +112,21 @@
         //   console.log(allNotes);
         //   console.log(duration)
         // sampler.triggerAttackRelease(["Eb4", "G4", "Bb4"], 4);
-        notes = ["D4", "F4", "A4", "C5", "E5"];
-        duration = ['0.5', '1', '0.5', '0.5', '0.5'];
+        // notes = ["D4", "F4", "A4", "C5", "E5"];
+        // duration = ['0.5', '1', '0.5', '0.5', '0.5'];
         //   console.log(allNotes);
         //   console.log(duration)
-        // duration = [];
-        // allNotes = [];
-        // notes = notes.split("|");
-        // durations = durations.split("|");
-        // function addNotes(value, index) {
-        //   allNotes.push(value);
-        //   duration.push(durations[index]);
-        // }
-        // notes.forEach(addNotes);
-        // console.log(notes);
-        // console.log(durations);
+        duration = [];
+        allNotes = [];
+        notes = notes.split("|");
+        durations = durations.split("|");
+        function addNotes(value, index) {
+          allNotes.push(value);
+          duration.push(durations[index]);
+        }
+        notes.forEach(addNotes);
+        console.log(notes);
+        console.log(durations);
         function play(note, index) {
           sampler.triggerAttackRelease(note, duration[index], now + (index));
         }

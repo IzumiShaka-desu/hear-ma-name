@@ -42,7 +42,7 @@
       });
     }
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js" type="application/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.7/Tone.js" type="application/javascript"></script>
   <script src="main.dart.js" type="application/javascript"></script>
   <script>
     function playNote(note, duration) {
@@ -61,7 +61,7 @@
         baseUrl: "https://tonejs.github.io/audio/salamander/",
       }).toDestination();
       
-      Tone.loaded().then(() => {
+      // Tone.loaded().then(() => {
         const now = Tone.now()
         //   // notes = ["D4", "F4", "A4", "C5", "E5"];
         //   // durations = ['0.5', '1', '0.5', '0.5', '0.5'];

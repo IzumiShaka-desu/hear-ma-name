@@ -45,6 +45,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.7/Tone.js" type="application/javascript"></script>
   <script src="main.dart.js" type="application/javascript"></script>
   <script>
+    const player = new Tone.Player("assets/assets/nishimiya.mp3").toDestination();
     function playNote(note, duration) {
       var synth = new Tone.Synth().toDestination();
       synth.triggerAttackRelease(note, duration);
@@ -60,7 +61,7 @@
     //     release: 1,
     //     baseUrl: "https://tonejs.github.io/audio/salamander/",
     //   }).toDestination();
-      
+
     //   Tone.loaded().then(() => {
     //     const now = Tone.now()
     //     //   // notes = ["D4", "F4", "A4", "C5", "E5"];
@@ -91,7 +92,11 @@
     //     // sampler.triggerAttackRelease(["Eb4", "G4", "Bb4"], 7,1);
 
     //   });
-  
+    function playEaster() {
+      Tone.loaded().then(() => {
+        player.start();
+      });
+    }
 
     function playNotes(notes, durations, length) {
       const sampler = new Tone.Sampler({
@@ -104,7 +109,7 @@
         release: 1,
         baseUrl: "https://tonejs.github.io/audio/salamander/",
       }).toDestination();
-      
+
       Tone.loaded().then(() => {
         const now = Tone.now()
         //   // notes = ["D4", "F4", "A4", "C5", "E5"];

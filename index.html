@@ -45,7 +45,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.7/Tone.js" type="application/javascript"></script>
   <script src="main.dart.js" type="application/javascript"></script>
   <script>
-    const player = new Tone.Player("assets/assets/nishimiya.mp3").toDestination();
     function playNote(note, duration) {
       var synth = new Tone.Synth().toDestination();
       synth.triggerAttackRelease(note, duration);
@@ -93,6 +92,7 @@
 
     //   });
     function playEaster() {
+      const player = new Tone.Player("assets/assets/nishimiya.mp3").toDestination();
       Tone.loaded().then(() => {
         player.start();
       });
